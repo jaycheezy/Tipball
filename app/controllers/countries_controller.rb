@@ -3,6 +3,7 @@ class CountriesController < ApplicationController
 
     def home
   		@countries = Country.all.order("title ASC")
+  		@leagues = League.all
     end
 
 	def new

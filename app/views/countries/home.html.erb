@@ -11,6 +11,15 @@
 		<div class="country robo" >
 			<%= image_tag country.flag.url(:medium) %><%= country.title %><i class="fa fa-chevron-right"></i>
 		</div>
+		<div class="leagues-container" >
+			<% @leagues.each do |league| %>
+				<% if league.country_id == country.id %>
+					<div class="league robo" >
+						<p><%= league.title %></p>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
 	</div>
 	<% end %>
 </section>

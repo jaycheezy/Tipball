@@ -6,12 +6,32 @@ countries:
   - title
   - created_at
   - updated_at
+  - flag_file_name
+  - flag_content_type
+  - flag_file_size
+  - flag_updated_at
   records: 
   - - 1
     - Austria
     - '2016-05-26 11:10:56.420461'
-    - '2016-05-26 11:10:56.420461'
+    - '2016-05-26 14:38:11.592199'
+    - Flag_of_Austria.png
+    - image/png
+    - 5932
+    - '2016-05-26 14:38:11.050868'
   - - 2
     - Germany
     - '2016-05-26 12:57:10.728135'
-    - '2016-05-26 12:57:10.728135'
+    - '2016-05-26 15:15:10.404912'
+    - Flag_of_Germany.png
+    - image/png
+    - 4477
+    - '2016-05-26 15:15:10.012482'
+  - - 3
+    - Spain
+    - '2016-05-26 15:15:30.007914'
+    - '2016-05-26 15:15:30.007914'
+    - Flag_of_Spain.png
+    - image/png
+    - 5743
+    - '2016-05-26 15:15:29.859611'
