@@ -1,4 +1,11 @@
-
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: my_production_database
+  pool: 5
+  username:
+  password:
 ---
 countries:
   columns:
