@@ -1,3 +1,417 @@
 // Place all the styles related to the teams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color:inherit;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+ 	background:black;
+ 	color:white;
+ 	font-family: 'Open Sans', sans-serif;
+
+
+ }
+ .body-cover {
+    height: 100%;
+    min-height: 100vh;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,.9) 0%, rgba(0, 0, 0, .9));
+}
+
+ nav {
+    height: 48px;
+    padding: 0px 12px;
+    line-height: 48px;
+     text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .06em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+section {
+    max-width: 700px;
+    margin: 18px auto;
+}
+.back {
+    width:100px;
+}
+.robo {
+ 	font-family: 'Roboto', sans-serif;
+ 	font-weight: 500;
+ }
+.user-actions {
+    float: right;
+}
+.user-actions .button {
+    margin: 0px;
+    padding: 0px;
+    line-height: 48px;
+    padding-left: 24px;
+}
+.call-to-action {
+    width: 130px;
+    margin: 60px auto;
+}
+.call-to-action .button {
+    background: #558E60;
+    margin: 0px auto;
+    width: 100px;
+}
+.country .button {
+    position: absolute;
+    right: 42px;
+    background: #A54242;
+    line-height: 0px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.country .button:hover {
+    background: #AF2424;
+}
+.button {
+    padding: 15px;
+    margin: 15px 20px;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+header {
+ 	padding: 60px 24px 24px;
+ 	text-align: center;
+ }
+header h1 {
+ 	margin-bottom: 24px;
+ 	font-size: 48px;
+ }
+.fa-dribbble:before {
+    color: orange;
+}
+header h3 {
+ 	margin:0px;
+}
+h2 {
+    font-size: 20px;
+    margin: 6px 18px;
+    line-height: 24px;
+}
+.selector-text {
+ 	margin: 6px 18px;
+ 	line-height: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.country, .league, .team {
+ 	height:60px;
+ 	line-height: 60px;
+ 	width: 100%;
+ 	color:white;
+ 	border-bottom: 1px solid black;
+ 	position:relative;
+ 	font-size: 14px;
+    letter-spacing: .06em;
+ }
+ .country {
+ 	background: rgb(50,50,50);
+ 	display:flex;
+    cursor:pointer;
+ }
+.country img {
+    height: 24px;
+    width: 24px;
+    margin: 18px 12px;
+}
+.country i, .league i, .team i {
+    position: absolute;
+    top:0px;
+    right: 18px;
+    line-height: 60px;
+    transition:.1s;
+}
+.team {
+    cursor:pointer;
+    border-bottom: 1px solid rgb(30,30,30);
+    background: black;
+}
+.team i:nth-child(3) {
+    right: 18px;
+
+}
+.team i:nth-child(4) {
+    right: 30px;
+}
+
+.team i.fa.fa-dribbble {
+    left: 15px;
+    right: inherit;
+    font-size: 18px;
+    display:none;
+}
+
+.country-overlay {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    background: rgba(0,0,0,.65);
+    text-align: right;
+    cursor: default;
+}
+.country-overlay span {
+    margin-right: 60px;
+    color: #323232;
+}
+.league {
+	background: rgb(30,30,30);
+    height:42px;
+    line-height: 42px;
+    color:gray;
+}
+.league p {
+	margin-left: 18px;
+}
+.team p {
+    margin-left: 48px;
+}
+.leagues-container {
+    display:none;
+}
+.lift {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    z-index: 1;
+}
+.open {
+    -moz-transform: rotate(90deg);
+    -webkit-transform:rotate(90deg); 
+    -ms-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+}
+.grow {
+	max-height:1000px;
+    opacity:1;
+}
+.team-header {
+    line-height: 40px;
+    margin: 0px auto 12px;
+    max-width: 700px;
+    clear: both;
+    display: flex;
+}
+.team-title {
+    font-size: 14px;
+}
+.team-flag, .other-team-flag {
+    margin: 0px 12px;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 30px;
+}
+.team-flag img, .other-team-flag img {
+    margin:5px;
+}
+.other-team-flag {
+    margin: 10px 12px;
+}
+ .swiper-container {
+    width: 100%;
+    max-width: 500px; 
+    background: white;
+    position: relative;
+    color:black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 10;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: white;
+    opacity: .2;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+}
+.swiper-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(255,0,0,0) 80%, rgba(0, 0, 0, .9));
+}
+.rating-title {
+    height: 30px;
+    padding-left: 18px;
+    line-height: 30px;
+    background: rgb(31, 30, 30);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.rating-title i {
+    font-weight: bolder;
+    margin-right: 6px;
+}
+.rating-view {
+    min-height: 100px;
+    max-width: 500px;
+    margin: 12px auto;
+    padding: 0px 18px;
+    line-height: 21px;
+    color: #AFAEAE;
+}
+.comment {
+    width: calc(100% - 2px);
+    margin: 24px 0px;
+    background: rgb(15, 15, 15);
+    padding: 12px 18px;
+    position: relative;
+    border: 1px solid rgb(30,30,30);
+    border-radius: 5px;
+    left: -18px;
+    color:white;
+}
+
+.teams-list .team {
+    display: flex;
+    border-bottom: 1px solid rgb(50,50,50);
+}
+.teams-list .team:hover {
+    background: rgb(50,50,50);
+}
+.teams-list .team:first-child {
+    border-top: 1px solid rgb(50,50,50);
+}
+.teams-list .team p {
+    margin-left: 6px;
+}
+.teams-list .team i:nth-child(2) {
+    right: 18px;
+
+}
+.teams-list .team i:nth-child(4) {
+    right: 30px;
+}
+.teams-list .team i:nth-child(5) {
+    right: 42px;
+}
+
+@media screen and (min-width: 700px) {
+    body{
+        /**background: url("stadium-wide.jpg") ;**/
+        background-position-x: center;
+        background-size: cover;
+    }
+    nav {
+        font-size: 18px;
+    }
+    .team:hover i.fa.fa-dribbble {
+        display:block;
+    }
+    .team:hover i {
+        color:orange;
+    }
+}

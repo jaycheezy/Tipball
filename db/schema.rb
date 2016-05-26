@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526161249) do
+ActiveRecord::Schema.define(version: 20160526170806) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "title"
@@ -34,8 +34,12 @@ ActiveRecord::Schema.define(version: 20160526161249) do
     t.string   "title"
     t.integer  "league_id"
     t.integer  "country_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "flag_file_name"
+    t.string   "flag_content_type"
+    t.integer  "flag_file_size"
+    t.datetime "flag_updated_at"
   end
 
 end
