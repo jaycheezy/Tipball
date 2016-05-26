@@ -1,0 +1,7 @@
+<%= link_to "Back",  controller: "countries", action: "home", id: @country %> <br>
+<%= @country.title %>
+
+<br>
+
+<%= link_to "Edit", edit_country_path(@country) %>
+<%= link_to "Delete", country_path(@country), method: :delete, data: { confirm: "Are you sure you want to delete this country?"} %>
