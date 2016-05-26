@@ -1,0 +1,22 @@
+<%= form_for @country, html: { multipart: true } do |f| %>
+	<% if @country.errors.any? %>
+	<h2><%= pluralize(@country.errors.count, "error") %> prevent this post from saving:</h2>
+	<ul>
+		<% @country.errors.full_messages.each do |msg| %>
+		<li> <%= msg %></li>
+
+		<% end %>
+	<%end%>
+	<%= f.label :title%><br>
+	<%= f.text_area :title%>
+
+	<br>
+
+	<%= f.label :flag%><br>
+	<%= f.file_field :flag %>
+
+	<br>
+
+	<%= f.submit %>
+
+<% end %>
