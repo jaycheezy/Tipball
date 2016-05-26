@@ -13,7 +13,7 @@ class CountriesController < ApplicationController
 
 
 	def country_params
-		params.require(:country).permit(:title)
+		params.require(:country).permit(:title, :flag)
 	end
 
 	def find_country

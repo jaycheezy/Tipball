@@ -9,7 +9,7 @@
 	<% @countries.each do |country| %>
 	<div class="country-container" >
 		<div class="country robo" >
-			<%= country.title %><i class="fa fa-chevron-right"></i>
+			<%= image_tag country.flag.url(:medium) %><%= country.title %><i class="fa fa-chevron-right"></i>
 		</div>
 	</div>
 	<% end %>
