@@ -4,6 +4,7 @@ class CountriesController < ApplicationController
     def home
   		@countries = Country.all.order("title ASC")
   		@leagues = League.all
+  		@teams = Team.all.order("title ASC")
     end
 
 	def new

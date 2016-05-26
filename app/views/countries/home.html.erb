@@ -17,6 +17,17 @@
 					<div class="league robo" >
 						<p><%= league.title %></p>
 					</div>
+					<div class="teams-container" >
+						<% @teams.each do |team| %>
+							<% if team.league_id == league.id %>
+								<%= link_to team do%>
+									<div class="team robo" >
+										<i class="fa fa-dribbble"></i><p><%= team.title %></p><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>
+									</div>
+								<% end %>
+							<% end %>
+						<% end %>
+					</div>	
 				<% end %>
 			<% end %>
 		</div>

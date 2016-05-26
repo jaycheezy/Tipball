@@ -3,4 +3,5 @@ class Country < ActiveRecord::Base
   	validates_attachment_content_type :flag, content_type: /\Aimage\/.*\Z/
 
   	has_many :leagues
+  	has_many :teams
 end
