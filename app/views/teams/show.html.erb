@@ -49,7 +49,7 @@
 			<% @leagues.each do |league| %>
 				<% if @team.league_id == league.id %>
 					<% if @team.country_id == country.id %>
-						<h3>Other teams in <%= country.title %></h3>
+						<h3 class="selector-text">Other teams in <%= country.title %></h3>
 						<div class="teams-list" >
 							<% @teams.each do |team| %>
 								<% if team.league_id == league.id %>
