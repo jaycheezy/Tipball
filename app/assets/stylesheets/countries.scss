@@ -424,7 +424,7 @@ h3 {
 
 @media screen and (min-width: 700px) {
     body{
-        background-image: image-url("stadium-wide.jpg") ;
+        background: url("stadium-wide.jpg") ;
         background-position-x: center;
         background-size: cover;
     }
