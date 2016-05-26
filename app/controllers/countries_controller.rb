@@ -7,6 +7,13 @@ class CountriesController < ApplicationController
   		@teams = Team.all.order("title ASC")
     end
 
+    def index
+   	@countries = Country.all.order("title ASC")
+  		@leagues = League.all
+  		@teams = Team.all.order("title ASC")
+  		render "home"
+    end
+
 	def new
 		@country = Country.new
 	end
