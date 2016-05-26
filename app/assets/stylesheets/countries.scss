@@ -193,12 +193,7 @@ h3 {
     font-size: 18px;
     display:none;
 }
-.team:hover i.fa.fa-dribbble {
-    display:block;
-}
-.team:hover i {
-    color:orange;
-}
+
 .country-overlay {
     position: absolute;
     top:0px;
@@ -430,5 +425,11 @@ h3 {
     }
     nav {
         font-size: 18px;
+    }
+    .team:hover i.fa.fa-dribbble {
+        display:block;
+    }
+    .team:hover i {
+        color:orange;
     }
 }
