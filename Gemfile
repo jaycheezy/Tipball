@@ -27,6 +27,12 @@ gem 'yaml_db'
 
 gem "paperclip", "~> 5.0.0.beta1"
 
+gem 'aws-sdk', '~> 2.3'
+gem 'fog'
+gem "figaro"
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

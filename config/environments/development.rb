@@ -9,6 +9,16 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  config.paperclip_defaults = {
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV.fetch('tipball'),
+    access_key_id: ENV.fetch('AKIAJOCRD3RIPRKNMCMQ'),
+    secret_access_key: ENV.fetch('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'),
+    s3_region: ENV.fetch('eu-central-1'),
+  }
+}
+
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
