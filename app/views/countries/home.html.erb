@@ -1,3 +1,12 @@
+<nav>
+	<div class="user-actions">
+		<% if user_signed_in? %>
+		<%= link_to destroy_user_session_path, method: :delete do %><div class="button">Log out</div><%end%>
+		<%else%>
+		<%= link_to new_user_session_path do %><div class="button">Sign In</div><%end%>
+		<%end%>
+	</div>
+</nav>
 <header>
 <h1 class="robo">Tip<i class="fa fa-dribbble fa-spin"></i>Ball</h1>
 <h2>Research and Rate<br>Professional Basketball Teams</h2>

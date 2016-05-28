@@ -1,5 +1,6 @@
 class CountriesController < ApplicationController
 	before_action :find_country, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
 
     def home
   		@countries = Country.all.order("title ASC")

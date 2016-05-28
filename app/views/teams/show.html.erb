@@ -26,10 +26,20 @@
 
 <!--Recommendation Rating-->
     <section class="rating">
-    	<div class="rating-title">&#128172 &nbsp <span style="line-height:20px;">Comments</span></div>
+    	<div class="rating-title robo">&#128172 &nbsp <span style="line-height:20px;">Comments</span></div>
     	<div class="rating-view">Here's what former players had to say about the <%= @team.title %>:
+
+    		<% @comments.each do |comment| %>
+				<% if comment.team_id == @team.id %>
+					<div class="comment">
+						<%= comment.text %>
+					</div>
+				<% end %>
+			<% end %>
+
     		<div class="comment">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
     		<div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+
     	</div>
     </section>
 
@@ -38,7 +48,7 @@
     <h3>Have you played for the <%= @team.title %>?</h3>
     <div class="call-to-action robo">
 		
-		<div class="button">Rate Team</div>
+		<div class="button">Leave a Tip</div>
 	</div>
 	 </section>
 

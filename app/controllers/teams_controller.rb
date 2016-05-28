@@ -16,6 +16,7 @@ class TeamsController < ApplicationController
 		@countries = Country.all.order("title ASC")
 		@leagues = League.all
 		@teams = Team.all.order("title ASC")
+		@comments = Comment.all
 	end
 
 
