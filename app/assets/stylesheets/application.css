@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+
+section.log-in {
+    margin: 60px auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+	section.log-in .field {
+	    margin: 18px 0px;
+	    line-height: 18px;
+	}
+	section.log-in h2{
+    	margin-left: 0px;
+	}
+	section.log-in input{
+    	background: white;
+    	padding: 6px;
+	}
+
+section.log-in .second-choice {
+    text-decoration: underline;
+    line-height: 40px;
+}
+section.log-in .actions input {
+    padding: 15px;
+    background: gray;
+    border:none;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: 14px;
+    width: 140px;
+    font-family: "roboto";
+
+}
