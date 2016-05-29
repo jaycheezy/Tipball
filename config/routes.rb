@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'teams/show'
 
-  resources :countries
+  resources :countries 
   resources :teams do
     resources :comments
   end
