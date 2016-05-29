@@ -1,4 +1,4 @@
-<nav>
+<nav class="team-nav">
   <div class="back">
     <%= link_to countries_path do %>
       <div>Tip<i class="fa fa-dribbble"></i>Ball<br></div>
@@ -7,7 +7,7 @@
 </nav>
 
 <section class="log-in">
-  <div class="member" style="margin:0px 30px 0px 20px">
+  <div class="member" style="margin:0px 30px 42px 12px">
     <h2>Already have an account?</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -34,7 +34,7 @@
     <% end %>
   </div>
 
-  <div class="non-member" style="margin-left:20px">
+  <div class="non-member" style="margin-left:12px">
     <h2>If not, get one here</h2>
     &#128071
     <div class="second-choice">

@@ -1,7 +1,14 @@
-<nav>
+<nav class="team-nav">
 	<div class="back">
 		<%= link_to countries_path do %>
 			<div>Tip<i class="fa fa-dribbble"></i>Ball<br></div>
+		<%end%>
+	</div>
+	<div class="user-actions">
+		<% if user_signed_in? %>
+		<%= link_to destroy_user_session_path, method: :delete do %><div class="button">Log out</div><%end%>
+		<%else%>
+		<%= link_to new_user_session_path do %><div class="button">Sign In</div><%end%>
 		<%end%>
 	</div>
 </nav>
