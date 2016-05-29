@@ -54,6 +54,7 @@ section.log-in .actions input {
     font-size: 14px;
     width: 140px;
     font-family: "roboto";
+    -webkit-appearance:none;
 
 }
 
