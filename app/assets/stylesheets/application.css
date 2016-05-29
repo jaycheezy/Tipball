@@ -33,6 +33,7 @@ section.log-in {
 	}
 	section.log-in h2{
     	margin-left: 0px;
+        font-family: 'roboto';
 	}
 	section.log-in input{
     	background: white;
@@ -58,6 +59,7 @@ section.log-in .actions input {
 
 }
 
+
 .alert-box {
     position: absolute;
     top: 36px;
@@ -69,4 +71,8 @@ p.alert {
 }
 p.notice {
     color: #40D640;
+}
+
+.field input {
+    margin-top: 3px;
 }
