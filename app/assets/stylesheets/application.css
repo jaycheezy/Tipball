@@ -16,10 +16,17 @@
 
 
 section.log-in {
-    margin: 60px auto;
+    margin: 30px auto;
     display:flex;
     flex-wrap: wrap;
 }
+@media screen and (min-width: 700px) {
+    section.log-in {
+        margin: 60px auto;
+        justify-content: center;
+    }
+ }
+
 	section.log-in .field {
 	    margin: 18px 0px;
 	    line-height: 18px;
@@ -38,7 +45,7 @@ section.log-in .second-choice {
 }
 section.log-in .actions input {
     padding: 15px;
-    background: gray;
+    background: lightgray;
     border:none;
     border-radius: 3px;
     text-align: center;
@@ -48,4 +55,19 @@ section.log-in .actions input {
     width: 140px;
     font-family: "roboto";
 
+}
+
+.alert-box {
+    position: absolute;
+    top: 42px;
+    right: calc(50% - 175px);
+    text-align: center;
+    max-width: 350px;
+    border-radius: 5px;
+}
+p.alert {
+    color: #943C35;
+}
+p.notice {
+    color: #40D640;
 }

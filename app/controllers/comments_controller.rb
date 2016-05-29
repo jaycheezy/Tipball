@@ -40,7 +40,7 @@ class CommentsController < ApplicationController
 
 	def destroy
 		@comment.destroy
-		redirect_to team_path
+		redirect_to @team
 	end
 
 
