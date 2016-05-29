@@ -49,5 +49,8 @@ class TeamsController < ApplicationController
 	def find_country
 		@country = Country.find(params[:id])
 	end
+	def find_comment
+		@comment = Comment.find(params[:id])
+	end
 
 end

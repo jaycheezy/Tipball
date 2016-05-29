@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
 	before_action :find_team
 	before_action :find_comment, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
 
 	def index
 	end
@@ -12,7 +13,7 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = Comment.new(comment_params)
-		#@comment.user_id = current_user.id
+		@comment.user_id = current_user.id
 		@comment.team_id = @team.id
 
 		if @comment.save
@@ -30,7 +31,11 @@ class CommentsController < ApplicationController
 	end
 
 	def update
-		@comment.update comment_params
+		if @comment.update comment_params
+			redirect_to @team, notice: "comment was saved"
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy

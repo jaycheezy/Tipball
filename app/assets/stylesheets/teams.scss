@@ -373,6 +373,22 @@ h2 {
     left: -18px;
     color:white;
 }
+.comment-button-container {
+    display: flex;
+    position: absolute;
+    right: 12px;
+    bottom: -36px;
+}
+.comment-button {
+    background: gray;
+    border-radius: 3px;
+    width: 60px;
+    padding: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 24px;
+    margin-left: 24px;
+}
 
 .teams-list .team {
     display: flex;
