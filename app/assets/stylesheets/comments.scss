@@ -1,3 +1,40 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.comment-container {
+    margin: 0px auto;
+    max-width: 500px;
+    padding: 12px;
+}
+
+.comment-container label {
+    display: none;
+}
+
+.comment-container textarea {
+    resize: none;
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    height: 200px;
+}
+
+.comment-container .actions input {
+    padding: 15px;
+    background: lightgray;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: 14px;
+    width: 140px;
+    font-family: "roboto";
+    -webkit-appearance: none;
+}
