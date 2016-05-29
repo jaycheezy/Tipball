@@ -16,7 +16,8 @@ class TeamsController < ApplicationController
 		@countries = Country.all.order("title ASC")
 		@leagues = League.all
 		@teams = Team.all.order("title ASC")
-		@comments = Comment.all
+		#@comments = Comment.all
+		@comments = Comment.where(team_id: @team.id).order("created_at DESC")
 	end
 
 

@@ -30,11 +30,9 @@
     	<div class="rating-view">Here's what former players had to say about the <%= @team.title %>:
 
     		<% @comments.each do |comment| %>
-				<% if comment.team_id == @team.id %>
 					<div class="comment">
 						<%= comment.text %>
-					</div>
-				<% end %>
+					</div>	
 			<% end %>
 
     		<div class="comment">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
@@ -48,7 +46,7 @@
     <h3>Have you played for the <%= @team.title %>?</h3>
     <div class="call-to-action robo">
 		
-		<div class="button">Leave a Tip</div>
+		<%= link_to new_team_comment_path(@team) do %><div class="button">Leave a Tip</div><%end%>
 	</div>
 	 </section>
 
